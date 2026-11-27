@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>예수님 생일카페 — 중고등부 초대장</title>
+<meta name="description" content="중고등부 친구들을 초대합니다. 12월 24일(목) 오후 5시~7시, 죽전초 옆 성서교회 1층 카페. 올해 크리스마스이브엔 예수님 생일파티에 놀러 오세요!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bible114.github.io/jesus-birthday-cafe/teens/">
+<meta property="og:title" content="예수님 생일카페 — 중고등부 초대장">
+<meta property="og:description" content="중고등부 친구들을 초대합니다 · 12월 24일(목) 오후 5시~7시 · 죽전초 옆 성서교회 1층 카페">
+<meta property="og:image" content="https://bible114.github.io/jesus-birthday-cafe/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#c1ceae">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/icon64.png">
+<link rel="apple-touch-icon" href="../assets/icon180.png">
+<link rel="preload" href="fonts/jua.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/b/title.webp" as="image">
+<link rel="preload" href="../assets/b/jesus.webp" as="image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+/* 중고등부 판(11/27): 원본 QR페이지에서 두판_만들기.py로 만듦. RSVP 뺌, 12/24 하루 오후 5시~7시. 고칠 땐 원본을 고치고 스크립트 다시. */
+/* 방향(11/24 3판): 외벽 현수막을 휴대폰 세로로 옮긴 초대장. 현수막 그림에서 직접 오려 낸 제목·예수님·리본·꽃·솔잎·엽서를 쓰고,
+   글씨는 현수막 안내 글과 같은 배민 주아, 색은 현수막 그림에서 뽑은 색만(세이지 종이·딸기빨강·솔잎초록·금별·크림 종이·분홍 종이).
+   현수막의 QR 우표 자리는 D-day 우표. 흐름은 모바일 청첩장: 봉투 → 현수막 → 영상 → 초대 글 → 달력 → 할 일 → 방명록 → 오시는 길 → 보내기.
+   제목 그림은 assets/b/title.webp 한 장 — 현수막 제목이 바뀌면 이 그림만 바꾸면 됨. */
+@font-face{font-family:"Jua";src:url("fonts/jua.woff2") format("woff2");font-display:swap}
+:root{
+  --sage:#c1ceae; --sage-d:#a9bb95; --sage-ink:#3d5a43;
+  --red:#89171c; --red-l:#b3323a; --pink:#de8883; --mark:#f3b0ba;
+  --pine:#284a32; --olive:#56633a; --gold:#ebae62; --paper:#faead5; --paper-l:#fdf6ea; --line:#e6d3b4;
+  --brown:#3b2a20; --mute:#7a6a5c;
+  --jua:"Jua","Apple SD Gothic Neo",sans-serif;
+  --serif:"Gowun Batang","AppleMyungjo","Nanum Myeongjo",serif;
+  --script:"Great Vibes",cursive;
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .25  0 0 0 0 .3  0 0 0 0 .2  0 0 0 .10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  --dots:radial-gradient(circle,rgba(255,255,255,.75) 1.6px,transparent 2.2px);
+  --torn:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'><path d='M0 8 L0 4 L4 2.5 L7 5 L11 1.5 L15 4 L19 2 L23 5.5 L27 3 L31 5 L35 1 L39 4 L43 2 L47 5 L51 3 L55 6 L59 2 L63 4 L67 1.5 L71 5 L75 3 L79 5.5 L83 2 L87 4.5 L91 1.5 L95 4 L100 3 L100 8Z'/></svg>");
+  color-scheme:light;
+  --u:min(1vw,4.12px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:var(--serif);color:var(--brown);background:var(--sage-d);overflow-x:hidden}
+body.locked{overflow:hidden}
+.page{position:relative;max-width:412px;margin:0 auto;background:var(--sage);overflow-x:hidden;overflow-x:clip}
+@media (min-width:452px){body{padding:24px 0}.page{border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(20,50,25,.35)}}
+#snow{position:fixed;inset:0;pointer-events:none;z-index:30}
+/* 배경 음악 단추 (페이지 오른쪽 위에 붙어 다님) */
+.bgm{position:fixed;z-index:40;top:calc(12px + env(safe-area-inset-top));right:max(12px,calc((100vw - 412px)/2 + 12px));width:46px;height:46px;border-radius:50%;border:2px solid var(--paper-l);background:rgba(137,23,28,.88);color:#fff;display:grid;place-items:center;cursor:pointer;padding:0;box-shadow:0 6px 14px rgba(60,20,20,.3)}
+.bgm svg{width:22px;height:22px}
+.bgm .eq{display:none;gap:2px;align-items:flex-end;height:18px}
+.bgm .eq i{width:3px;border-radius:2px;background:#fff;animation:eq 1s ease-in-out infinite}
+.bgm .eq i:nth-child(2){animation-delay:-.35s}.bgm .eq i:nth-child(3){animation-delay:-.7s}.bgm .eq i:nth-child(4){animation-delay:-.2s}
+.bgm.on .eq{display:flex}.bgm.on .off{display:none}
+@keyframes eq{0%,100%{height:5px}50%{height:18px}}
+@media (min-width:452px){.bgm{top:36px}}
+[hidden]{display:none!important}
+button{font:inherit}
+img{max-width:100%}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,[role=button]:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.tex-sage{background:var(--noise),var(--dots) 0 0/38px 38px,var(--sage)}
+.tex-paper{background:url("../assets/b/paper.jpg") 0 0/256px,var(--paper)}
+
+/* ── 0. 봉투 (현수막 오른쪽 아래 하트 엽서) ── */
+.env{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;cursor:pointer;transition:opacity .7s ease .9s}
+.env .box{position:relative;width:min(calc(78*var(--u)),320px);aspect-ratio:3/2;perspective:900px}
+.env .back{position:absolute;inset:0;border-radius:8px;background:#efdcbc;box-shadow:0 24px 44px rgba(30,50,25,.35)}
+.env .card{position:absolute;left:7%;right:7%;top:8%;bottom:6%;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:8%;transition:transform .9s cubic-bezier(.2,.8,.2,1) .35s}
+.env .card img{width:100%}
+.env .front{position:absolute;inset:0;border-radius:8px;background:linear-gradient(160deg,#f8ecd6,#ecdab9);clip-path:polygon(0 0,50% 62%,100% 0,100% 100%,0 100%)}
+.env .flap{position:absolute;left:0;right:0;top:0;height:64%;transform-origin:50% 0;transition:transform .6s ease;z-index:2;filter:drop-shadow(0 3px 3px rgba(120,90,50,.22))}
+.env .flap::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#f6e9d1,#e8d4b0);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:8px 8px 0 0}
+.env .seal{position:absolute;left:50%;top:100%;width:62px;height:56px;margin:-34px 0 0 -31px;transition:opacity .25s}
+.env p{margin:0;text-align:center;font-family:var(--jua);color:var(--pine);font-size:22px;line-height:1.45}
+.env small{display:block;margin-top:8px;font-family:var(--serif);font-size:14px;color:var(--sage-ink);animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.35}}
+.env.open .seal{opacity:0}
+.env.open .flap{transform:rotateX(180deg);z-index:0}
+.env.open .card{transform:translateY(-60%)}
+.env.open{opacity:0;pointer-events:none}
+
+/* ── 1. 현수막 ── */
+.hero{position:relative;padding:46px 12px 0;overflow:hidden}
+.hero .deco{position:absolute;pointer-events:none}
+.hero .ttl{position:relative;z-index:3;display:block;width:100%;height:auto;filter:drop-shadow(0 4px 6px rgba(60,40,20,.18))}
+.stage{position:relative;height:clamp(320px,calc(98*var(--u)),450px);margin-top:-2px}
+.stage .pink{position:absolute;left:-18px;bottom:-30px;width:112%;height:58%;background:var(--noise),var(--pink);
+  -webkit-mask:var(--torn) 0 0/100% 14px no-repeat,linear-gradient(#000,#000) 0 13px/100% 100% no-repeat;
+          mask:var(--torn) 0 0/100% 14px no-repeat,linear-gradient(#000,#000) 0 13px/100% 100% no-repeat;transform:rotate(-3deg)}
+.stage .halo{position:absolute;left:50%;top:-34%;width:120%;aspect-ratio:1;max-width:none;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,251,236,.95) 0,rgba(255,246,222,.72) 24%,rgba(255,240,210,0) 62%)}
+.stage .halo::before{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(rgba(255,249,230,.6) 0 5deg,transparent 5deg 14deg);
+  -webkit-mask:radial-gradient(circle,#000 18%,transparent 64%);mask:radial-gradient(circle,#000 18%,transparent 64%);animation:spin 90s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stage .rib{position:absolute;left:-14px;top:19%;width:37%;transform:rotate(-4deg);filter:drop-shadow(0 4px 5px rgba(90,30,30,.18))}
+.stage .flw2{position:absolute;left:5%;top:28%;width:13%;transform:rotate(-10deg)}
+.stage .cup{position:absolute;right:-6px;top:7%;width:31%;z-index:3;transform:rotate(7deg);filter:drop-shadow(0 6px 8px rgba(60,40,20,.22));animation:bob 4.5s ease-in-out infinite}
+@keyframes bob{50%{transform:rotate(4deg) translateY(-5px)}}
+.stage .tw{position:absolute;inset:0;z-index:3;pointer-events:none}
+.stage .tw i{position:absolute;display:block;aspect-ratio:1;animation:twinkle 2.8s ease-in-out infinite}
+.stage .tw svg{display:block;width:100%;height:100%;fill:#f7c531;filter:drop-shadow(0 0 4px rgba(255,236,160,.9))}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.45) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:61}
+.stage .jesus{position:absolute;left:50%;bottom:0;height:100%;transform:translateX(-52%);width:auto;max-width:none;z-index:2;filter:drop-shadow(0 8px 14px rgba(60,30,20,.25))}
+.stamp{position:relative;flex:none;width:112px;transform:rotate(4deg);filter:drop-shadow(0 5px 7px rgba(60,40,20,.22))}
+.stamp::after{content:"";position:absolute;left:50%;top:-11px;width:64px;height:20px;margin-left:-32px;background:rgba(243,176,186,.85);transform:rotate(-6deg)}
+.stamp .st{position:relative;padding:5px;text-align:center;background:#fffdf7;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,radial-gradient(circle 4px,#0000 3.4px,#000 4px) -4px -4px/10px 10px round;
+          mask:linear-gradient(#000 0 0) content-box,radial-gradient(circle 4px,#0000 3.4px,#000 4px) -4px -4px/10px 10px round}
+.stamp .in{display:block;padding:9px 0 8px;margin:2px;border:2px dashed #d9bf97}
+.stamp .in > span{display:block}
+.stamp .k{font-family:var(--jua);font-size:15px;color:var(--pine)}
+.stamp .n{font-family:var(--jua);font-size:42px;line-height:1.05;color:var(--red);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.stamp .s{font-family:var(--jua);font-size:15px;color:var(--red-l)}
+.vplay{position:absolute;right:2px;top:47%;z-index:3;width:86px;height:86px;border:0;border-radius:50%;padding:0;cursor:pointer;color:#fff;
+  background:radial-gradient(circle at 35% 30%,#d4545c,var(--red-l) 55%,var(--red));
+  box-shadow:0 0 0 6px var(--paper-l),0 10px 20px rgba(80,20,20,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;animation:breathe 2.4s ease-in-out infinite}
+.vplay svg{width:28px;height:28px;margin-left:4px}
+.vplay b{font-family:var(--jua);font-weight:400;font-size:15px;line-height:1}
+@keyframes breathe{50%{transform:scale(1.05)}}
+
+/* 찢은 크림 엽서(현수막 안내 글 칸) */
+.post{position:relative;z-index:4;margin:-44px -2px 0;padding:34px 16px 34px;text-align:center;color:var(--pine);font-family:var(--jua);box-shadow:0 10px 18px rgba(60,50,30,.18)}
+.post::before,.post::after{content:"";position:absolute;left:0;right:0;height:14px;background:inherit;
+  -webkit-mask:var(--torn) 0 0/100% 100%;mask:var(--torn) 0 0/100% 100%}
+.post::before{top:-13px}
+.post::after{bottom:-13px;transform:scaleY(-1)}
+.post .bowp{position:absolute;right:-22px;top:-74px;width:132px;z-index:3;transform:rotate(6deg);filter:drop-shadow(0 4px 5px rgba(80,30,30,.2))}
+.post .d1t{font-size:.66em;color:var(--red);letter-spacing:0;margin-left:.15em;white-space:nowrap;display:inline-block}
+.post .d1{white-space:normal!important;}
+.post .d1{font-size:clamp(25px,calc(7.8*var(--u)),33px);line-height:1.2;letter-spacing:-.01em;white-space:nowrap}
+.post .mid{display:flex;align-items:center;gap:10px;margin-top:16px;padding-top:16px;border-top:2px dashed #dcc6a0}
+.post .info{flex:1;min-width:0;text-align:left}
+.post .row{display:flex;align-items:flex-start;gap:8px;font-size:clamp(15px,calc(4.4*var(--u)),18px);line-height:1.35;margin-bottom:7px}
+.post .row .ic{flex:none;width:24px;height:24px;margin-top:-1px;border-radius:50%;display:grid;place-items:center;background:var(--pine);color:var(--paper-l)}
+.post .row .ic svg{width:16px;height:16px}
+.post .d2b{margin-top:2px;font-size:clamp(14px,calc(4*var(--u)),16.5px);line-height:1.45;word-break:keep-all}
+.post .d2{margin-top:8px;font-size:clamp(15px,calc(4.4*var(--u)),18px);line-height:1.55}
+.post .dash{display:inline-block;width:.62em;height:.11em;margin:0 .22em;border-radius:.06em;background:currentColor;vertical-align:.3em}
+.post .dash.s{width:.42em;margin:0 .1em}
+.post .dot{display:inline-block;width:.24em;height:.24em;margin:0 .38em;border-radius:50%;background:var(--gold);vertical-align:.24em}
+.post .d3{margin-top:10px;font-size:clamp(23px,calc(7*var(--u)),29px);color:var(--red);line-height:1.2}
+.post .d3 span{background:linear-gradient(transparent 58%,var(--mark) 58%,var(--mark) 92%,transparent 92%);padding:0 4px}
+.post .d3 small{font-size:.6em;color:var(--gold);vertical-align:.3em}
+.post .d4{display:flex;flex-wrap:wrap;gap:7px 6px;margin:12px 0 0;padding:0;list-style:none}
+.post .d4 li{padding:5px 11px 3px;border-radius:999px;font-size:clamp(13.5px,calc(3.9*var(--u)),15.5px);line-height:1.3;white-space:nowrap;box-shadow:0 2px 0 rgba(60,40,20,.12)}
+.post .d4 .s1{background:#dfe9d2;color:var(--pine);transform:rotate(-2deg)}
+.post .d4 .s2{background:#fde1e4;color:var(--red);transform:rotate(1.5deg)}
+.post .d4 .s3{background:#fff0c9;color:#7a5a12;transform:rotate(-1deg)}
+.post .d4 .s4{background:#ecdcc8;color:#6b4226;transform:rotate(2deg)}
+.post .d4 .s5{background:#dce7f6;color:#2f5fa8;transform:rotate(-1.5deg)}
+.post .d4 span{white-space:nowrap}
+.post .d4 i{font-style:normal;color:var(--gold);margin:0 .25em}
+.post .rule{display:flex;align-items:center;gap:8px;margin:16px 6px 14px;color:var(--gold)}
+.post .rule::before,.post .rule::after{content:"";flex:1;border-top:3px dotted #c9b48d}
+.post .d5{display:inline-block;padding:4px 16px 2px;font-size:clamp(25px,calc(7.6*var(--u)),31px);color:var(--red);background:linear-gradient(transparent 12%,var(--mark) 12%,var(--mark) 88%,transparent 88%);transform:rotate(-1deg)}
+.post .d5t{margin-top:6px;font-size:clamp(16px,calc(4.8*var(--u)),19px);color:var(--red)}
+.post .d6{margin-top:12px;font-size:clamp(14.5px,calc(4.3*var(--u)),17px);color:var(--olive)}
+.post .d6 b{font-weight:400;color:var(--red)}
+.post .envd{position:absolute;right:-8px;bottom:-34px;width:92px;transform:rotate(8deg);z-index:2;filter:drop-shadow(0 4px 6px rgba(60,40,20,.2))}
+.post .flw{position:absolute;left:-10px;bottom:-30px;width:58px;z-index:2}
+.hero-foot{height:40px}
+.post .who{display:inline-block;margin:0 0 12px;padding:4px 14px 2px;font-size:clamp(17px,calc(5*var(--u)),21px);color:var(--red);background:linear-gradient(transparent 14%,var(--mark) 14%,var(--mark) 86%,transparent 86%);transform:rotate(-1.2deg);white-space:nowrap}
+.env .who{display:inline-block;margin-bottom:10px;padding:3px 14px 1px;font-size:19px;color:var(--red);background:linear-gradient(transparent 14%,var(--mark) 14%,var(--mark) 86%,transparent 86%);transform:rotate(-1.2deg)}
+#invite h2 .to{display:block;font-size:.78em;color:var(--red)}
+
+/* ── 띠(섹션) 공통 ── */
+.band{position:relative;padding:62px max(22px,env(safe-area-inset-right)) 60px max(22px,env(safe-area-inset-left));text-align:center}
+.band.paper{z-index:1}
+.band.paper::before,.band.paper::after{content:"";position:absolute;left:0;right:0;height:14px;background:inherit;
+  -webkit-mask:var(--torn) 0 0/100% 100%;mask:var(--torn) 0 0/100% 100%}
+.band.paper::before{top:-13px}
+.band.paper::after{bottom:-13px;transform:scaleY(-1)}
+.band > *{position:relative}
+.band > .deco{position:absolute;pointer-events:none;z-index:0}
+.eng{display:block;font-family:var(--script);font-size:32px;color:var(--red);line-height:1.25}
+.band h2{margin:0;font-family:var(--jua);font-weight:400;font-size:28px;line-height:1.3;color:var(--red);word-break:keep-all}
+.band.tex-sage h2{color:var(--pine)}
+.lead{margin:12px auto 0;max-width:30em;font-size:15.5px;line-height:1.8;color:var(--mute);word-break:keep-all}
+.band.tex-sage .lead{color:var(--sage-ink)}
+
+/* ── 영상 ── */
+.vrow{position:relative;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin:16px calc(-1*max(22px,env(safe-area-inset-left))) 0;padding:18px max(22px,env(safe-area-inset-left)) 24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.vrow::-webkit-scrollbar{display:none}
+.vrow.one{justify-content:center}
+.vslide{flex:0 0 74%;max-width:310px;scroll-snap-align:center}
+.vcap{margin:14px 4px 0;font-family:var(--jua);font-size:18px;line-height:1.35;color:var(--pine);word-break:keep-all}
+.vcap a{display:inline-block;margin-top:4px;font-size:15px;color:var(--red)}
+.vid.ig{background:linear-gradient(150deg,#f9ce34,#ee2a7b 55%,#6228d7)}
+.vid .badge{position:absolute;left:8px;top:8px;z-index:2;padding:3px 9px 2px;border-radius:999px;font-family:var(--jua);font-size:13px;color:#fff;background:rgba(0,0,0,.55)}
+#video .dots i{background:rgba(40,74,50,.25)}
+#video .dots i.on{background:var(--red)}
+.vwrap{position:relative;display:block;width:100%}
+.vid-tape{position:absolute;left:50%;top:-12px;z-index:2;width:110px;height:26px;margin-left:-55px;background:rgba(243,176,186,.85);transform:rotate(-3deg);box-shadow:0 2px 4px rgba(0,0,0,.12)}
+.vid{position:relative;width:100%;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#111;border:8px solid var(--paper-l);box-shadow:0 22px 40px rgba(30,50,25,.35);transform:rotate(-1.2deg)}
+.vid video,.vid iframe,.vid .shot{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover;display:block}
+.vid .go{position:absolute;inset:0;border:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.55));cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:10px;padding:0 0 26px;color:#fff}
+.vid .go .ring{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;background:var(--red-l);box-shadow:0 0 0 7px rgba(253,246,234,.92),0 10px 24px rgba(0,0,0,.4);animation:breathe 2.4s ease-in-out infinite}
+.vid .go .ring svg{width:34px;height:34px;margin-left:6px}
+.vid .go b{font-family:var(--jua);font-weight:400;font-size:18px;text-shadow:0 2px 6px rgba(0,0,0,.5)}
+.vmeta{margin-top:16px;font-size:14.5px}
+.vmeta a{color:var(--red);font-family:var(--jua);font-size:17px}
+
+.shorts{margin-top:36px}
+.shorts h3{margin:0;font-family:var(--jua);font-weight:400;font-size:22px;color:var(--red)}
+.shorts .hint{margin:4px 0 0;font-size:14px;color:var(--mute)}
+.srow{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:max(22px,env(safe-area-inset-left));margin:14px calc(-1*max(22px,env(safe-area-inset-left))) 0;padding:6px max(22px,env(safe-area-inset-left)) 16px;scrollbar-width:none;text-align:left}
+.srow::-webkit-scrollbar{display:none}
+.sitem{flex:0 0 42%;scroll-snap-align:start}
+.sbox{position:relative;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#2a2a2a;border:5px solid var(--paper-l);box-shadow:0 10px 18px rgba(30,50,25,.28)}
+.sbox img,.sbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.sbox .sgo{position:absolute;inset:0;border:0;padding:0;cursor:pointer;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.5));display:grid;place-items:center}
+.sbox .sgo span{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--red-l);box-shadow:0 0 0 4px rgba(253,246,234,.9)}
+.sbox .sgo svg{width:22px;height:22px;margin-left:3px}
+.sbox .badge{position:absolute;left:6px;top:6px;padding:2px 8px 1px;border-radius:999px;font-family:var(--jua);font-size:12px;color:#fff;background:rgba(0,0,0,.55)}
+.sbox.ig{background:linear-gradient(150deg,#f9ce34,#ee2a7b 55%,#6228d7)}
+.sitem p{margin:8px 2px 0;font-family:var(--jua);font-size:15px;line-height:1.35;color:var(--pine);word-break:keep-all}
+
+/* ── 초대 글 ── */
+.letter{margin:24px auto 0;max-width:22em;font-size:17px;line-height:2.05;word-break:keep-all}
+.letter p{margin:0 0 1.1em}
+.letter strong{font-weight:700;color:var(--red)}
+.hosts{display:grid;grid-template-columns:auto auto;justify-content:center;align-items:baseline;gap:10px 18px;margin:30px auto 0;padding:22px 0 0;border-top:1px dashed rgba(40,74,50,.35);max-width:18em;font-size:16px}
+.hosts dt{color:var(--sage-ink)}
+.hosts dd{margin:0;text-align:left;font-family:var(--jua);font-size:19px;color:var(--pine)}
+.hosts dd.who{color:var(--red)}
+
+/* ── 달력 + 카운트다운 ── */
+.cal{margin:24px auto 0;max-width:330px}
+.cal .ym{font-family:var(--jua);font-size:22px;color:var(--brown)}
+.cal table{width:100%;margin-top:12px;border-collapse:collapse;table-layout:fixed;font-family:var(--jua)}
+.cal th{font-weight:400;font-size:14px;color:var(--mute);padding-bottom:10px}
+.cal th:first-child,.cal td.sun{color:var(--red-l)}
+.cal td{height:42px;font-size:17px;position:relative;color:var(--brown)}
+.cal td span{position:relative;z-index:1}
+.cal td.on{color:#fff}
+.cal td.on::before{content:"";position:absolute;left:50%;top:50%;width:36px;height:36px;margin:-18px 0 0 -18px;border-radius:50%;background:var(--red-l)}
+.cal td.on::after{content:"";position:absolute;left:50%;top:1px;width:2px;height:8px;margin-left:-1px;background:var(--gold);border-radius:1px;box-shadow:0 -4px 0 1px rgba(235,174,98,.5)}
+.cal td.xmas span{color:var(--red-l)}
+.cal .cal-note{margin-top:10px;font-size:14px;color:var(--mute)}
+.count{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.count div{width:66px;padding:12px 0 10px;border-radius:12px;background:var(--paper-l);box-shadow:inset 0 0 0 1.5px var(--line)}
+.count b{display:block;font-family:var(--jua);font-weight:400;font-size:28px;color:var(--red);font-variant-numeric:tabular-nums;line-height:1.1}
+.count small{font-size:12px;color:var(--mute)}
+.count-msg{margin-top:16px;font-size:15.5px;word-break:keep-all}
+.count-msg b{color:var(--red-l);font-family:var(--jua);font-weight:400;font-size:18px}
+
+/* ── 할 일 카드 ── */
+.cards{position:relative;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:22px calc(-1*max(22px,env(safe-area-inset-left))) 0;padding:12px max(22px,env(safe-area-inset-left)) 26px;scrollbar-width:none;-webkit-overflow-scrolling:touch;text-align:left}
+.cards::-webkit-scrollbar{display:none}
+.card{flex:0 0 78%;scroll-snap-align:center;border-radius:4px;padding:20px 16px 18px;box-shadow:0 12px 24px rgba(30,50,25,.25);position:relative;display:flex;flex-direction:column;gap:12px}
+.card h3{margin:0;font-family:var(--jua);font-weight:400;font-size:clamp(20px,calc(6.2*var(--u)),24px);line-height:1.2;color:var(--red);white-space:nowrap}
+.card .pic{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;background:#efe3cc}
+.card .pic > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card p{margin:0;font-size:15px;line-height:1.6;color:var(--brown);word-break:keep-all}
+.tag{position:absolute;right:8px;bottom:10px;transform:rotate(-5deg);background:var(--red-l);color:#fff;font-family:var(--jua);font-size:16px;padding:5px 12px 4px;border-radius:999px;box-shadow:0 4px 10px rgba(120,20,30,.3);z-index:2;white-space:nowrap}
+.tag.top{bottom:auto;top:10px;transform:rotate(5deg)}
+.pic.cert{background:#e9dcc2}
+.pic.cert > img{inset:9% 12% 17% 6%;width:82%;height:74%;object-fit:contain;transform:rotate(-2.5deg);filter:drop-shadow(0 6px 8px rgba(60,40,20,.28))}
+.pcs{position:absolute;inset:0;display:flex;justify-content:center;align-items:flex-end;padding:0 6px 12px}
+.pcs img{width:30%;height:auto;border-radius:8px;border:4px solid var(--paper-l);box-shadow:0 8px 14px rgba(30,50,25,.3)}
+.pcs img:nth-child(1){transform:rotate(-8deg) translateX(10px)}
+.pcs img:nth-child(2){transform:translateY(-8px);z-index:1}
+.pcs img:nth-child(3){transform:rotate(8deg) translateX(-10px)}
+.goods{display:flex;flex-wrap:wrap;gap:6px}
+.goods span{font-family:var(--jua);font-size:14px;color:var(--pine);background:var(--paper-l);border:1.5px solid var(--line);border-radius:999px;padding:3px 10px 2px}
+.game-screen{position:absolute;inset:0;background:var(--pine);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#fff;font-family:var(--jua)}
+.game-screen b{font-weight:400;font-size:30px;color:var(--gold)}
+.game-screen span{font-size:14px;opacity:.8}
+.cafe{position:absolute;inset:0;background:radial-gradient(circle at 50% 60%,#9b6a45,#6b4226)}
+.cafe svg{position:absolute;inset:6% 10%;width:80%;height:88%}
+.booth{position:absolute;inset:0;background:#e3ebd6}
+.booth::before{content:"";position:absolute;left:22%;right:22%;top:8px;height:12px;border-radius:6px;background:var(--pine)}
+.strip{position:absolute;left:50%;top:13px;width:44%;margin-left:-22%;transform:rotate(-4deg);transform-origin:50% 0;background:var(--paper-l);padding:5px 6px 0;box-shadow:0 8px 16px rgba(30,50,25,.3)}
+.strip i{display:block;aspect-ratio:236/136;margin-top:5px;border-radius:3px;background:#f4e6d4 center/cover no-repeat}
+.dots{display:flex;justify-content:center;gap:7px;margin-top:-8px}
+.dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.7);transition:width .25s,background .25s}
+.dots i.on{width:20px;border-radius:4px;background:var(--red)}
+.game{display:flex;align-items:center;gap:14px;margin-top:26px;border-radius:16px;padding:16px 18px;box-shadow:0 10px 22px rgba(30,50,25,.2);text-align:left;text-decoration:none;color:inherit}
+.game .ico{flex:none;width:54px;height:54px;border-radius:14px;background:var(--pine);display:grid;place-items:center}
+.game .ico svg{width:32px;height:32px}
+.game b{display:block;font-family:var(--jua);font-weight:400;font-size:20px;color:var(--pine);line-height:1.25;white-space:nowrap}
+.game span{display:block;font-size:14px;line-height:1.5;color:var(--brown);word-break:keep-all}
+.game > div:nth-child(2){min-width:0}
+.game{gap:12px;padding:16px 14px}
+.game .lock{margin-left:auto;flex:none;font-family:var(--jua);font-size:14px;color:var(--red-l);border:2px solid var(--red-l);border-radius:999px;padding:4px 10px 3px;white-space:nowrap}
+a.game .lock{background:var(--red-l);color:#fff}
+
+/* ── 단추 ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 28px;border:0;border-radius:999px;background:var(--red);color:var(--paper-l);font-family:var(--jua);font-size:20px;text-decoration:none;cursor:pointer;box-shadow:0 8px 16px rgba(80,10,20,.25)}
+.btn.pine{background:var(--pine);box-shadow:0 8px 16px rgba(20,50,30,.25)}
+.btn.line{background:transparent;color:var(--pine);box-shadow:inset 0 0 0 2px var(--pine)}
+.row-btn{margin-top:22px}
+.fine{margin-top:12px;font-size:13px;color:var(--mute);word-break:keep-all}
+
+/* ── 축하 방명록 ── */
+.notes{display:grid;gap:12px;margin:24px auto 0;max-width:360px;text-align:left}
+.note{position:relative;padding:16px 18px 14px;border-radius:3px;background:var(--paper-l);box-shadow:0 8px 18px rgba(30,50,25,.18)}
+.note:nth-child(3n+1){transform:rotate(-.6deg)}
+.note:nth-child(3n+2){transform:rotate(.5deg);background:#fff}
+.note p{margin:0;font-size:15.5px;line-height:1.7;white-space:pre-wrap;word-break:break-all}
+.note footer{display:flex;justify-content:space-between;gap:10px;margin-top:8px;font-size:13px;color:var(--mute)}
+.note footer b{font-weight:700;color:var(--red)}
+.empty{margin:24px auto 0;max-width:320px;padding:26px 18px;border-radius:14px;border:2px dashed rgba(40,74,50,.35);font-size:15px;color:var(--sage-ink);word-break:keep-all}
+.more{margin-top:14px;background:none;border:0;color:var(--pine);font-size:15px;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+
+/* ── 오시는 길·보내기 ── */
+.mapcard{margin:24px auto 0;max-width:360px;padding:22px 18px;border-radius:16px;background:var(--paper-l);box-shadow:inset 0 0 0 1.5px var(--line)}
+.mapcard .pl{font-family:var(--jua);font-size:24px;color:var(--pine);line-height:1.35}
+.mapcard .ad{display:block;margin-top:8px;font-size:15px;color:var(--mute);word-break:keep-all}
+.nw{white-space:nowrap}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+.btns .btn{min-height:48px;padding:0 6px;font-size:18px}
+.btns .btn.line{grid-column:span 2}
+.park{margin:16px auto 0;max-width:360px;padding:20px 18px 18px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);text-align:left}
+.park h3{display:flex;align-items:center;gap:10px;margin:0;font-family:var(--jua);font-weight:400;font-size:21px;color:var(--pine)}
+.park h3 i{font-style:normal;display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:#2f5fa8;color:#fff;font-family:var(--jua);font-size:20px}
+.park h3 em{margin-left:auto;font-style:normal;font-family:var(--jua);font-size:13px;color:#8a5a00;background:#ffe08a;border-radius:999px;padding:3px 10px 2px}
+.park ol{margin:14px 0 0;padding:0;list-style:none;counter-reset:pk}
+.park li{position:relative;padding:0 0 12px 34px;font-size:15.5px;line-height:1.65;word-break:keep-all;counter-increment:pk}
+.park li::before{content:counter(pk);position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;background:var(--pine);color:#fff;font-family:var(--jua);font-size:14px;display:grid;place-items:center}
+.park li b{font-weight:700;color:var(--red)}
+.park li.no::before{content:"✕";background:var(--red-l)}
+.park li:only-child{padding:0 0 4px;font-size:16.5px}
+.park li:only-child::before{display:none}
+.park .btn{width:100%;min-height:50px;font-size:18px;margin-top:12px}
+.park .btn.line{min-height:46px;font-size:17px;margin-top:10px}
+.pkimg{position:relative;margin:6px 0 0;border-radius:10px;overflow:hidden}
+.pkimg img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.pkimg svg{position:absolute;inset:0;width:100%;height:100%}
+.pkimg figcaption{position:absolute;left:8px;bottom:8px;padding:5px 11px 4px;border-radius:999px;background:rgba(40,74,50,.88);color:#fff;font-family:var(--jua);font-size:15px}
+.pkvid{margin-top:12px;border-radius:10px;overflow:hidden;background:#000;aspect-ratio:16/9}
+.pkvid video{display:block;width:100%;height:100%}
+.share{display:grid;gap:10px;margin:22px auto 0;max-width:320px}
+.verse{margin-top:40px;color:var(--pine)}
+.verse p{margin:0;font-size:16px;line-height:1.9;word-break:keep-all}
+.verse cite{display:block;margin-top:6px;font-style:normal;font-family:var(--jua);font-size:17px;color:var(--red)}
+.foot{height:calc(24px + env(safe-area-inset-bottom))}
+.foot a{color:var(--red)}
+
+/* ── 쓰기 창 ── */
+.sheet{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center;background:rgba(20,30,20,.55)}
+.sheet form{width:100%;max-width:412px;max-height:92vh;overflow:auto;padding:26px 22px calc(22px + env(safe-area-inset-bottom));border-radius:20px 20px 0 0;animation:up .32s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(40px);opacity:.4}}
+.sheet h3{margin:0;font-family:var(--jua);font-weight:400;font-size:24px;color:var(--red);text-align:center}
+.sheet .sub{margin:6px 0 0;text-align:center;font-size:14px;color:var(--mute);word-break:keep-all}
+.field{display:block;margin-top:20px}
+.field > span{display:block;margin-bottom:8px;font-family:var(--jua);font-size:17px;color:var(--pine)}
+.field > span em{font-style:normal;font-family:var(--serif);font-size:13px;color:var(--mute)}
+.field input[type=text],.field textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;font:inherit;font-size:16px;color:var(--brown)}
+.field textarea{min-height:110px;resize:vertical;line-height:1.6}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.sheet .acts{display:grid;grid-template-columns:1fr 2fr;gap:8px;margin-top:24px}
+.sheet .err{margin:12px 0 0;text-align:center;font-size:14px;color:var(--red-l)}
+.done{text-align:center;padding:12px 0 4px}
+.done img{width:120px;margin:0 auto;display:block}
+.done p{margin:12px 0 0;font-size:16px;line-height:1.8;word-break:keep-all}
+.toast{position:fixed;left:50%;bottom:calc(26px + env(safe-area-inset-bottom));z-index:70;transform:translateX(-50%);padding:12px 20px;border-radius:999px;background:var(--pine);color:#fff;font-size:15px;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+
+@media (prefers-reduced-motion:reduce){.stage .halo::before,.stage .cup,.stage .tw i,.vplay,.vid .go .ring,.env small{animation:none}#snow{display:none}.env,.env *{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="locked">
+<canvas id="snow" aria-hidden="true"></canvas>
+
+<!-- 0. 봉투 -->
+<div class="env tex-sage" id="env" role="button" tabindex="0" aria-label="초대장 열기">
+  <div class="box" aria-hidden="true">
+    <div class="back"></div>
+    <div class="card tex-paper"><img src="../assets/b/title.webp" alt=""></div>
+    <div class="front"></div>
+    <div class="flap"><svg class="seal" viewBox="0 0 62 56"><path d="M31 52 C10 37 3 27 4 17 C5 8 12 3 19 3 C25 3 29 7 31 12 C33 7 37 3 43 3 C50 3 57 8 58 17 C59 27 52 37 31 52Z" fill="#e0676c" stroke="#a3242b" stroke-width="3.5" stroke-linejoin="round"/><path d="M15 15 C16 11 19 9 22 9" fill="none" stroke="#fbd3d3" stroke-width="3" stroke-linecap="round"/></svg></div>
+  </div>
+  <p><span class="who">중고등부 친구들을 초대합니다</span><br>예수님 생일파티<br>초대장이 도착했어요<small>눌러서 열어 보세요</small></p>
+</div>
+
+<button class="bgm" id="bgmBtn" type="button" aria-label="배경 음악 켜기" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3" fill="currentColor"/><circle cx="17" cy="16" r="3" fill="currentColor"/></svg></button>
+<canvas id="confetti" hidden></canvas>
+<audio id="bgm" src="../assets/bgm.mp3" loop preload="auto"></audio>
+<div class="page">
+
+  <!-- 1. 현수막 -->
+  <section class="hero tex-sage">
+    <h1 style="margin:0"><img class="ttl" src="../assets/b/title.webp" alt="Merry Christmas 예수님 생일카페" width="1190" height="276"></h1>
+    <div class="stage">
+      <div class="halo" aria-hidden="true"></div>
+      <img class="rib" src="../assets/b/ribbon.webp" alt="">
+      <img class="flw2" src="../assets/b/flower1.webp" alt="">
+      <div class="pink"></div>
+      <img class="jesus" src="../assets/b/jesus.webp" alt="생일 케이크를 들고 웃는 예수님" width="880" height="1004">
+      <img class="cup" src="../assets/b/cup.webp" alt="">
+      <div class="tw" aria-hidden="true"><i style="left:6%;top:4%;width:26px;animation-delay:0s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></i><i style="left:30%;top:-2%;width:19px;animation-delay:0.9s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></i><i style="left:70%;top:2%;width:22px;animation-delay:1.6s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></i><i style="left:94%;top:30%;width:19px;animation-delay:0.4s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></i><i style="left:10%;top:46%;width:21px;animation-delay:1.2s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></i><i style="left:84%;top:64%;width:24px;animation-delay:2s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></i><i style="left:22%;top:22%;width:16px;animation-delay:2.4s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></i><i style="left:62%;top:-4%;width:18px;animation-delay:0.6s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z"/></svg></i></div>
+      <button class="vplay" id="coverPlay" type="button" aria-label="홍보 영상 보기">
+        <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg><b>영상 보기</b>
+      </button>
+    </div>
+    <div class="post tex-paper">
+      <img class="bowp" src="../assets/b/bow.webp" alt="">
+      <div class="who">중고등부 친구들을 초대합니다</div>
+      <div class="d1">12월 24일(목) <span class="d1t">오후 5시<i class="dash"></i>7시</span></div>
+      <div class="mid">
+        <div class="info">
+          
+          <div class="row"><i class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="9.5" r="2.6" fill="currentColor"/></svg></i><span>죽전초 옆 성서교회<br>1층 카페</span></div>
+          <div class="d3"><span>JESUS 포토존</span></div>
+          <ul class="d4"><li class="s1">만화로 만나는 예수님</li><li class="s2">크리스마스 고사</li><li class="s3">예수님 굿즈</li><li class="s4">맛있는 커피</li><li class="s5">재밌는 게임</li></ul>
+        </div>
+        <div class="stamp" aria-live="polite"><div class="st"><span class="in"><span class="k" id="tkK">오픈까지</span><span class="n" id="tkN">D-28</span><span class="s" id="tkS">12월 24일</span></span></div></div>
+      </div>
+      <div class="rule">★</div>
+      <div class="d5">인생네컷 포토부스</div>
+      <div class="d6">예수님과 어사(어색한 사이)도 환영 <b>♥</b></div>
+      <img class="flw" src="../assets/b/flower1.webp" alt="">
+      <img class="envd" src="../assets/b/envelope.webp" alt="">
+    </div>
+    <div class="hero-foot"></div>
+  </section>
+
+  <!-- 2. 영상 -->
+  <section class="band paper tex-paper" id="video">
+    <img class="deco" src="../assets/b/pine.webp" alt="" style="left:-30px;top:14px;width:150px;transform:rotate(-14deg)">
+    <span class="eng">Our Video</span>
+    <h2>오늘은 누구 생일?</h2>
+    <p class="lead" id="vlead">소리를 켜고 보세요.</p>
+    <div class="vrow" id="vrow"></div>
+    <div class="dots" id="vdots" aria-hidden="true"></div>
+  </section>
+
+  <!-- 3. 초대 글 -->
+  <section class="band tex-sage" id="invite">
+    <img class="deco" src="../assets/b/flower2.webp" alt="" style="right:14px;top:30px;width:56px">
+    <span class="eng">Invitation</span>
+    <h2><span class="to">중고등부 친구들을</span>생일파티에 초대합니다</h2>
+    <div class="letter">
+      <p>해마다 크리스마스가 오면<br>선물도 케이크도<br>늘 우리 차지였지요.</p>
+      <p>올해는 생일 주인공을<br>제대로 챙겨 보려고 해요.<br><strong>바로, 예수님이에요.</strong></p>
+      <p>케이크 든 예수님 옆에서 사진도 찍고<br>만화 전시도 보고, 퀴즈도 풀며<br>함께 축하해 주세요.</p>
+      <p>교회가 처음이어도 괜찮아요.<br>친구 생일파티에 가듯<br>가볍게 놀러 오세요.</p>
+    </div>
+  </section>
+
+  <!-- 4. 달력 + 카운트다운 -->
+  <section class="band paper tex-paper" id="date">
+    <span class="eng">Save the date</span>
+    <h2>12월 24일 목요일<br>크리스마스이브에 열려요</h2>
+    <div class="cal">
+      <div class="ym">2026. 12</div>
+      <table aria-label="2026년 12월 달력, 24일 표시">
+        <thead><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr></thead>
+        <tbody id="calBody"></tbody>
+      </table>
+      <div class="cal-note">오후 5시 ~ 7시 · 25일 성탄절</div>
+    </div>
+    <div class="count" id="count" aria-live="off">
+      <div><b id="cD">0</b><small>일</small></div>
+      <div><b id="cH">00</b><small>시간</small></div>
+      <div><b id="cM">00</b><small>분</small></div>
+      <div><b id="cS">00</b><small>초</small></div>
+    </div>
+    <p class="count-msg" id="countMsg">예수님 생일파티가 <b>28일</b> 남았어요</p>
+  </section>
+
+  <!-- 5. 카페에서 할 일 (홍보지 뒷면과 같은 내용, 포토존이 가장 앞) -->
+  <section class="band tex-sage" id="todo">
+    <span class="eng">Program</span>
+    <h2>카페에서 할 일</h2>
+    <p class="lead">옆으로 넘겨 보세요</p>
+    <div class="cards" id="cards">
+      <article class="card tex-paper">
+        <h3>Jesus 포토존</h3>
+        <div class="pic"><img src="../assets/concept.jpg" alt="예수님 등신대 옆에서 사진 찍는 모습" loading="lazy" style="object-position:50% 2%"><span class="tag">찰칵! 인생샷</span></div>
+        <p>예수님 옆자리 비어 있어요. 예수님과 사진 한 장, 어사(어색한 사이)도 환영!</p>
+      </article>
+      <article class="card tex-paper">
+        <h3>만화로 만나는 예수님</h3>
+        <div class="pic"><img src="../assets/space.jpg" alt="만화 그림이 걸린 성탄 전시 공간" loading="lazy"><span class="tag">구석구석 볼거리</span></div>
+        <p>만화를 통해 듣는 예수님 말씀</p>
+      </article>
+      <article class="card tex-paper">
+        <h3>크리스마스 고사</h3>
+        <div class="pic cert"><img src="../assets/cert.jpg" alt="크리스마스 고사 합격증" loading="lazy"><span class="tag">두뇌 풀가동</span></div>
+        <p>예수님의 탄생 이야기로 가볍게 풀어보는 퀴즈</p>
+      </article>
+      <article class="card tex-paper">
+        <h3>예수님 굿즈</h3>
+        <div class="pic"><div class="pcs"><img src="../assets/pc_window.jpg" alt="" loading="lazy"><img src="../assets/pc_cake.jpg" alt="" loading="lazy"><img src="../assets/pc_invite.jpg" alt="" loading="lazy"></div><span class="tag top">그냥 못 지나감</span></div>
+        <div class="goods"><span>포카</span><span>컵홀더</span><span>엽서</span><span>거울 배지</span><span>키캡</span><span>아크릴 키링</span></div>
+      </article>
+      <article class="card tex-paper">
+        <h3>맛있는 커피</h3>
+        <div class="pic"><div class="cafe" role="img" aria-label="김이 나는 커피 한 잔"><svg viewBox="0 0 200 150" aria-hidden="true"><path d="M84 30c-8 10 8 14 0 26M100 24c-8 12 8 16 0 30M116 30c-8 10 8 14 0 26" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".85"/><ellipse cx="100" cy="128" rx="62" ry="10" fill="#c9b48d"/><path d="M58 66h84l-8 52a10 10 0 0 1-10 8H76a10 10 0 0 1-10-8z" fill="#faead5"/><path d="M142 76h8a16 16 0 0 1 0 32h-12" fill="none" stroke="#faead5" stroke-width="9"/><rect x="58" y="62" width="84" height="10" rx="5" fill="#fff7ea"/><path d="M90 92c0-6 10-6 10 0 0-6 10-6 10 0 0 8-10 13-10 13s-10-5-10-13z" fill="#de8883"/></svg></div><span class="tag">따끈따끈</span></div>
+        <p>따뜻한 커피 한 잔 들고 천천히 쉬어 가세요</p>
+      </article>
+      <article class="card tex-paper">
+        <h3>인생네컷</h3>
+        <div class="pic"><div class="booth" role="img" aria-label="예수님 사진이 담긴 네 컷 사진 띠"><div class="strip"><i style="background-image:url(../assets/pc_cake.jpg);background-position:50% 30%"></i><i style="background-image:url(../assets/pc_window.jpg);background-position:50% 25%"></i><i style="background-image:url(../assets/pc_invite.jpg);background-position:50% 38%"></i><i style="background-image:url(../assets/standee.png);background-position:50% 8%"></i></div></div><span class="tag">네 컷 추억</span></div>
+        <p>인생네컷 포토부스에서 예수님과 함께 네 컷</p>
+      </article>
+      <article class="card tex-paper">
+        <h3>크리스마스 미니게임</h3>
+        <div class="pic"><div class="game-screen"><span>SCORE 0</span><b>GAME START!</b><span>청년부 제작</span></div><span class="tag">승부욕 발동</span></div>
+        <p>청년들이 직접 만든 미니게임</p>
+      </article>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+    <div id="gameBox"></div>
+  </section>
+
+  <!-- 7. 축하 방명록 -->
+  <section class="band paper tex-paper" id="guest">
+    <img class="deco" src="../assets/b/pine.webp" alt="" style="right:-40px;top:20px;width:150px;transform:scaleX(-1) rotate(-14deg)">
+    <span class="eng">Guestbook</span>
+    <h2>예수님께 생일 축하 한마디</h2>
+    <p class="lead">남긴 글은 이 페이지에 함께 보여요.</p>
+    <div class="row-btn"><button class="btn pine" type="button" id="openGuest">축하 글 남기기</button></div>
+    <div class="notes" id="notes"></div>
+    <div class="empty" id="notesEmpty" hidden></div>
+    <button class="more" id="moreNotes" type="button" hidden>축하 글 더 보기</button>
+  </section>
+
+  <!-- 8. 오시는 길 -->
+  <section class="band tex-sage" id="map">
+    <span class="eng">Location</span>
+    <h2>오시는 길</h2>
+    <div class="mapcard">
+      <div class="pl">죽전초 옆<br>성서교회 1층 카페</div>
+      <span class="ad" id="addrText">경기 용인시 수지구 <span class="nw">용구대로2772번길 17</span></span>
+      <div class="btns">
+        <a class="btn pine" href="https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%20%EC%9A%A9%EC%9D%B8%EC%8B%9C%20%EC%88%98%EC%A7%80%EA%B5%AC%20%EC%9A%A9%EA%B5%AC%EB%8C%80%EB%A1%9C2772%EB%B2%88%EA%B8%B8%2017" target="_blank" rel="noopener">네이버 지도</a>
+        <a class="btn pine" href="https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%20%EC%9A%A9%EC%9D%B8%EC%8B%9C%20%EC%88%98%EC%A7%80%EA%B5%AC%20%EC%9A%A9%EA%B5%AC%EB%8C%80%EB%A1%9C2772%EB%B2%88%EA%B8%B8%2017" target="_blank" rel="noopener">카카오맵</a>
+        <button class="btn line" id="copyAddr" type="button">주소 복사하기</button>
+      </div>
+    </div>
+    <div class="park" id="park">
+      <h3><i>P</i>차 가지고 오실 때<em id="parkDraft" hidden>확인 중</em></h3>
+      <ol id="parkList"></ol>
+      <figure class="pkimg">
+        <img src="../assets/parking_corner.jpg" alt="마켓무 가게와 그 옆 골목 입구" loading="lazy">
+        <svg viewBox="0 0 100 75" preserveAspectRatio="none" aria-hidden="true"><path d="M40 70 C41 62 42 56 42 50" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round"/><path d="M40 70 C41 62 42 56 42 50" fill="none" stroke="#b3323a" stroke-width="2.2" stroke-linecap="round"/><path d="M37.6 52.6 L42 46.5 L45.8 53" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.6 52.6 L42 46.5 L45.8 53" fill="none" stroke="#b3323a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <figcaption>마켓무 옆 골목으로 쭉 들어오세요</figcaption>
+      </figure>
+      <button class="btn pine" type="button" id="parkGo">주차장 가는 길 영상 보기</button>
+      <div class="pkvid" id="pkvid" hidden><video id="pkVideo" controls playsinline preload="none" poster="../assets/parking_poster.jpg"><source src="../assets/parking.mp4" type="video/mp4"></video></div>
+    </div>
+  </section>
+
+  <!-- 9. 초대장 보내기 + 말씀 -->
+  <section class="band paper tex-paper" id="share">
+    <img class="deco" src="../assets/b/flower1.webp" alt="" style="left:12px;top:26px;width:50px">
+    <span class="eng">Share</span>
+    <h2>친구에게 초대장 보내기</h2>
+    <p class="lead">함께 오고 싶은 친구에게 이 초대장을 보내 주세요.</p>
+    <div class="share">
+      <button class="btn" type="button" id="shareBtn">초대장 보내기</button>
+      <button class="btn line" type="button" id="copyLink">주소 복사하기</button>
+    </div>
+    <div class="verse">
+      <p>오늘 다윗의 동네에 너희를 위하여 구주가 나셨으니<br>곧 그리스도 주시니라</p>
+      <cite>누가복음 2:11</cite>
+    </div>
+  </section>
+  <div class="foot tex-sage" aria-hidden="true"></div>
+</div>
+
+<!-- 축하 글 창 -->
+<div class="sheet" id="guestSheet" hidden>
+  <form id="guestForm" class="tex-paper" novalidate>
+    <div id="guestBody">
+      <h3>생일 축하 한마디</h3>
+      <p class="sub">예수님께 하고 싶은 말을 남겨 주세요. 이 페이지에 보여요.</p>
+      <label class="field"><span>이름 <em>(별명도 좋아요)</em></span><input type="text" name="name" maxlength="20" autocomplete="nickname" required></label>
+      <label class="field"><span>축하 글</span><textarea name="msg" maxlength="200" required placeholder="예수님, 생일 축하해요!"></textarea></label>
+      <input class="hp" type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="err" id="guestErr" hidden></p>
+      <div class="acts"><button class="btn line" type="button" data-close>닫기</button><button class="btn pine" type="submit">남기기</button></div>
+    </div>
+  </form>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+/* ===== 여기만 바꾸면 페이지가 바뀌어요 =====
+   (글자를 새로 넣으면 글꼴을 다시 줄여야 함: ../QR페이지_만들기/만들기.sh)
+   게임이 열리면: const GAME = { title:"생일 미니게임", desc:"청년부가 만든 게임", url:"games/" };
+*/
+const GAME     = null;
+const API      = "https://script.google.com/macros/s/AKfycby_HBAZBaW8zjiR0j6LqlBnzbOIM8Xub4qk5BwNhVS7b4ppqhTr3eFBSybOPQyVvjIK/exec"; // 교회 시트(방명록 탭을 씀, 원본과 같은 곳)
+const YT_ID    = "rqvHC9UNFcQ";                                  // 본 영상: 성서교회 유튜브(11/29 오전 11시 공개 예약)
+const YT_OPEN  = new Date("2026-11-29T11:00:00+09:00");          // 이때부터 유튜브로 재생, 그 전엔 페이지 안 영상(비공개라 유튜브로는 안 나옴)
+/* 숏츠: 생기면 한 줄씩 추가. 유튜브는 영상 주소 끝 11글자(ID), 인스타는 릴스 주소 그대로.
+   예) { title:"산타의 고백", yt:"abcdEFGhijk" },  { title:"포토존 미리 보기", ig:"https://www.instagram.com/reel/XXXX/" } */
+const SHORTS   = [
+];
+const OPEN     = new Date("2026-12-24T17:00:00+09:00");
+const CLOSE    = new Date("2026-12-24T19:00:00+09:00");
+const SITE     = "https://bible114.github.io/jesus-birthday-cafe/teens/";
+/* 주차 안내: 한 줄씩. no:true면 ✕(대지 말 곳)로 표시. PARK_DRAFT=true면 '확인 중' 딱지(올리기 전에 false로) */
+const PARK_DRAFT = false;
+const PARKING  = [
+  { t:"<b>교회 뒤편에 주차장</b>이 있어요. 가는 길은 아래 영상으로 확인할 수 있어요" },
+];
+
+const $ = id => document.getElementById(id);
+const toast = t => { const e=$("toast"); e.textContent=t; e.hidden=false; clearTimeout(toast.t); toast.t=setTimeout(()=>e.hidden=true,2200); };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+/* 배경 음악: 들어오면 나옴(휴대폰은 첫 누름에). 영상이 재생되면 줄어들며 멈추고, 영상이 멈추거나 끝나면 이어서 다시 나옴 */
+const BGM=(function(){
+  const a=$("bgm"), btn=$("bgmBtn"), busy=new Set(); let want=true, fadeT=0;
+  try{ if(sessionStorage.getItem("bgmOff")==="1") want=false; }catch(e){}
+  const show=()=>{ const on=!a.paused; btn.classList.toggle("on",on); btn.setAttribute("aria-pressed",on); btn.setAttribute("aria-label",on?"배경 음악 끄기":"배경 음악 켜기"); };
+  const fade=(to,ms,done)=>{ cancelAnimationFrame(fadeT); const from=a.volume, t0=performance.now();
+    const step=t=>{ const k=Math.min(1,(t-t0)/ms); try{ a.volume=from+(to-from)*k; }catch(e){} if(k<1) fadeT=requestAnimationFrame(step); else done&&done(); };
+    fadeT=requestAnimationFrame(step); };
+  let out=false;
+  const start=()=>{ if(!want||busy.size||document.hidden) return;
+    if(!a.paused){ if(out){ out=false; fade(.55,800); } return; }
+    try{ a.volume=0; }catch(e){}
+    a.play().then(()=>{ fade(.55,1200); show(); }).catch(()=>{}); };
+  const stop=(ms)=>{ out=true; fade(0,ms||500,()=>{ out=false; a.pause(); show(); }); };
+  a.addEventListener("play",show); a.addEventListener("pause",show);
+  btn.addEventListener("click",e=>{ e.stopPropagation(); if(a.paused){ want=true; busy.clear(); try{ sessionStorage.removeItem("bgmOff"); }catch(x){} start(); } else { want=false; try{ sessionStorage.setItem("bgmOff","1"); }catch(x){} stop(300); } });
+  // 휴대폰은 소리를 처음 누를 때만 허락 → 첫 누름에 켬
+  const first=e=>{ if(e.target.closest&&e.target.closest("#bgmBtn")) return; start(); if(!a.paused) ["pointerdown","keydown","touchend"].forEach(t=>removeEventListener(t,first,true)); };
+  ["pointerdown","keydown","touchend"].forEach(t=>addEventListener(t,first,true));
+  document.addEventListener("visibilitychange",()=>{ if(document.hidden){ if(!a.paused) stop(200); } else start(); });
+  start();
+  return {
+    duck(id){ busy.add(id); if(!a.paused) stop(500); },
+    free(id){ busy.delete(id); if(!busy.size) setTimeout(start,350); },
+    watch(v,id){ v.addEventListener("play",()=>BGM.duck(id)); v.addEventListener("pause",()=>BGM.free(id)); v.addEventListener("ended",()=>BGM.free(id)); }
+  };
+})();
+
+/* 봉투 열 때 한 번: 현수막 색 꽃가루 */
+function confetti(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const c=$("confetti"), x=c.getContext("2d"), dpr=Math.min(2,devicePixelRatio||1);
+  const W=innerWidth, H=innerHeight; c.width=W*dpr; c.height=H*dpr; x.scale(dpr,dpr); c.hidden=false;
+  const col=["#ee8e7a","#f7c531","#f2559a","#9cc9a5","#fcf6ea","#c85a5e","#ebae62"];
+  const P=Array.from({length:140},(_,i)=>{ const a=-Math.PI/2+(Math.random()-.5)*2.2, v=7+Math.random()*9;
+    return {x:W/2+(Math.random()-.5)*60,y:H*.42,vx:Math.cos(a)*v,vy:Math.sin(a)*v,r:Math.random()*6.28,vr:(Math.random()-.5)*.4,w:5+Math.random()*6,h:8+Math.random()*8,c:col[i%col.length],s:i%5===0}; });
+  const t0=performance.now();
+  (function f(t){ const k=(t-t0)/1000; x.clearRect(0,0,W,H);
+    P.forEach(p=>{ p.vy+=.28; p.vx*=.985; p.vy*=.985; p.x+=p.vx; p.y+=p.vy; p.r+=p.vr;
+      x.save(); x.globalAlpha=Math.max(0,1-Math.max(0,k-2)/.8); x.translate(p.x,p.y); x.rotate(p.r); x.fillStyle=p.c;
+      if(p.s){ x.beginPath(); x.arc(0,0,p.w/2,0,6.28); x.fill(); } else x.fillRect(-p.w/2,-p.h/2,p.w,p.h*Math.abs(Math.cos(p.r*1.7)));
+      x.restore(); });
+    if(k<2.8) requestAnimationFrame(f); else { c.hidden=true; }
+  })(t0);
+}
+
+/* 0. 봉투: 누르면 열림(이 누름으로 배경 음악이 켜짐). 이번 방문에 한 번만 */
+(function(){
+  const env=$("env"); let seen=false;
+  try{ seen=sessionStorage.getItem("envSeen_teens")==="1"; }catch(e){}
+  const open=()=>{ if(env.classList.contains("open")) return; env.classList.add("open"); document.body.classList.remove("locked"); setTimeout(confetti,350);
+    try{ sessionStorage.setItem("envSeen_teens","1"); }catch(e){} setTimeout(()=>env.hidden=true,1700); };
+  if(seen || matchMedia("(prefers-reduced-motion: reduce)").matches){ env.hidden=true; document.body.classList.remove("locked"); return; }
+  env.addEventListener("click",open); env.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } });
+})();
+
+/* 1. D-day 우표 */
+(function(){
+  const k=$("tkK"), n=$("tkN"), s=$("tkS"), now=new Date();
+  const kst=d=>new Date(d.getTime()+9*3600e3), ymd=d=>{const x=kst(d);return Date.UTC(x.getUTCFullYear(),x.getUTCMonth(),x.getUTCDate())};
+  const diff=Math.round((ymd(OPEN)-ymd(now))/864e5);
+  if(now<OPEN){ n.textContent=diff>0?"D-"+diff:"D-DAY"; }
+  else if(now<=CLOSE){ k.textContent="지금은"; n.textContent="OPEN"; s.textContent="7시까지"; }
+  else { k.textContent="고마워요"; n.textContent="♥"; s.textContent="메리 크리스마스"; }
+})();
+
+/* 유튜브 재생 상태 → 배경 음악 (1=재생, 2=멈춤, 0=끝) */
+function ytWatch(id){
+  const hook=()=>{ new YT.Player(id,{events:{onStateChange:e=>{ if(e.data===1) BGM.duck(id); else if(e.data===2||e.data===0) BGM.free(id); }}}); };
+  if(window.YT&&YT.Player) return hook();
+  (window._ytq=window._ytq||[]).push(hook);
+  if(!window._ytLoad){ window._ytLoad=1; window.onYouTubeIframeAPIReady=()=>window._ytq.forEach(f=>f());
+    const sc=document.createElement("script"); sc.src="https://www.youtube.com/iframe_api"; document.head.appendChild(sc); }
+}
+
+/* 2. 영상: 본 영상 + 숏츠를 옆으로 넘겨 보기. 화면에 보이는 영상을 눌러 그 자리에서 재생 */
+(function(){
+  const useYT = new Date()>=YT_OPEN;
+  const list=[{title:"예수님 생일카페 홍보 영상", main:true, yt:YT_ID}].concat(SHORTS.filter(x=>x&&(x.yt||x.ig)));
+  const playSvg='<svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>';
+  const row=$("vrow");
+  row.innerHTML=list.map((v,i)=>{
+    const t=esc(v.title||("숏츠 "+i));
+    const poster = v.main ? "../assets/vposter.jpg" : (v.yt ? "https://i.ytimg.com/vi/"+esc(v.yt)+"/hqdefault.jpg" : "");
+    const inner = v.ig
+      ? '<a class="vid ig" href="'+esc(v.ig)+'" target="_blank" rel="noopener" aria-label="'+t+' 인스타그램에서 보기"><span class="badge">Instagram</span><span class="go"><span class="ring">'+playSvg+'</span><b>인스타에서 보기</b></span></a>'
+      : '<div class="vid" data-i="'+i+'"><img class="shot" src="'+poster+'" alt="" loading="lazy">'+(v.main?'':'<span class="badge">숏츠</span>')+'<button class="go" type="button" aria-label="'+t+' 재생"><span class="ring">'+playSvg+'</span><b>눌러서 재생</b></button></div>';
+    const yt = (v.main && useYT) ? '<br><a href="https://youtu.be/'+esc(YT_ID)+'" target="_blank" rel="noopener">유튜브에서 크게 보기</a>' : '';
+    return '<div class="vslide"><div class="vwrap"><span class="vid-tape" aria-hidden="true"></span>'+inner+'</div><p class="vcap">'+t+yt+'</p></div>';
+  }).join("");
+  row.classList.toggle("one", list.length===1);
+  if(list.length>1) $("vlead").textContent="옆으로 넘겨 보세요. 소리를 켜고 보세요.";
+  const play=box=>{
+    if(!box||box.dataset.on) return; box.dataset.on="1"; const v=list[+box.dataset.i];
+    if(v.main && !useYT){
+      box.innerHTML='<video controls playsinline preload="auto" poster="../assets/vposter.jpg"><source src="../assets/promo.mp4" type="video/mp4"></video>';
+      const vv=box.querySelector("video"); BGM.watch(vv,"main"); vv.play().catch(()=>{});
+    } else {
+      const id="yt"+box.dataset.i;
+      box.innerHTML='<iframe id="'+id+'" src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(v.yt)+'?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin='+encodeURIComponent(location.origin)+'" title="'+esc(v.title||"홍보 영상")+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      BGM.duck(id); ytWatch(id);
+    }
+  };
+  row.addEventListener("click",e=>{ const b=e.target.closest(".vid[data-i]"); if(b) play(b); });
+  const d=$("vdots");
+  if(list.length>1){
+    d.innerHTML='<i></i>'.repeat(list.length);
+    const upd=()=>{ const w=row.children[0].getBoundingClientRect().width+16; const i=Math.min(list.length-1,Math.round(row.scrollLeft/w)); [...d.children].forEach((e,j)=>e.classList.toggle("on",j===i)); };
+    row.addEventListener("scroll",upd,{passive:true}); upd();
+  }
+  $("coverPlay").addEventListener("click",()=>{ play(row.querySelector('.vid[data-i="0"]')); $("video").scrollIntoView({behavior:"smooth",block:"start"}); });
+})();
+
+/* 4. 달력 + 카운트다운 */
+(function(){
+  const first=new Date(2026,11,1).getDay(), days=31; let h="<tr>", c=0;
+  for(let i=0;i<first;i++,c++) h+="<td></td>";
+  for(let d=1; d<=days; d++,c++){
+    if(c && c%7===0) h+="</tr><tr>";
+    const cls=[]; if(c%7===0) cls.push("sun"); if(d===24) cls.push("on"); if(d===25) cls.push("xmas");
+    h+='<td'+(cls.length?' class="'+cls.join(" ")+'"':'')+'><span>'+d+'</span></td>';
+  }
+  while(c%7){ h+="<td></td>"; c++; }
+  $("calBody").innerHTML=h+"</tr>";
+  const two=n=>String(n).padStart(2,"0");
+  const tick=()=>{
+    const now=new Date();
+    if(now<OPEN){
+      let s=Math.floor((OPEN-now)/1000); const d=Math.floor(s/86400); s%=86400;
+      $("cD").textContent=d; $("cH").textContent=two(Math.floor(s/3600)); $("cM").textContent=two(Math.floor(s%3600/60)); $("cS").textContent=two(s%60);
+      $("countMsg").innerHTML = d>0 ? '예수님 생일파티가 <b>'+d+'일</b> 남았어요' : '오늘 오후 5시에 <b>문을 열어요</b>';
+    } else {
+      $("count").hidden=true;
+      $("countMsg").innerHTML = now<=CLOSE ? '지금 <b>생일파티 중</b>이에요. 놀러 오세요!' : '함께해 주셔서 <b>고마워요</b>. 메리 크리스마스!';
+      clearInterval(tick.i);
+    }
+  };
+  tick(); tick.i=setInterval(tick,1000);
+})();
+
+/* 5. 카드 점 + 게임 칸 */
+(function(){
+  const c=$("cards"), d=$("dots"), n=c.children.length;
+  d.innerHTML='<i></i>'.repeat(n);
+  const upd=()=>{ const w=c.children[0].getBoundingClientRect().width+14; const i=Math.min(n-1,Math.round(c.scrollLeft/w)); [...d.children].forEach((e,j)=>e.classList.toggle("on",j===i)); };
+  c.addEventListener("scroll",upd,{passive:true}); upd();
+  const pad='<svg viewBox="0 0 24 24" fill="none" stroke="#faead5" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="7" width="19" height="11" rx="5.5"/><path d="M7 10.5v4M5 12.5h4"/><circle cx="15.5" cy="11.5" r="1" fill="#ebae62" stroke="none"/><circle cx="18" cy="13.5" r="1" fill="#de8883" stroke="none"/></svg>';
+  $("gameBox").innerHTML = GAME
+    ? '<a class="game tex-paper" href="'+GAME.url+'"><div class="ico">'+pad+'</div><div><b>'+GAME.title+'</b><span>'+(GAME.desc||"")+'</span></div><span class="lock">플레이</span></a>'
+    : '<div class="game tex-paper"><div class="ico">'+pad+'</div><div><b>생일 미니게임</b><span>청년부가 만든 게임이 곧 여기 열려요</span></div><span class="lock">곧 오픈</span></div>';
+})();
+
+/* 7. 방명록 (교회 시트와 주고받기 — 원본과 같은 API·시트) */
+const Board=(function(){
+  let all=[], shown=8;
+  const ago=t=>{ if(!t) return ""; const m=Math.floor((Date.now()-t)/60000);
+    if(m<1) return "방금"; if(m<60) return m+"분 전"; const h=Math.floor(m/60); if(h<24) return h+"시간 전";
+    const d=new Date(t); return (d.getMonth()+1)+"월 "+d.getDate()+"일"; };
+  const EMPTY='아직 축하 글이 없어요.<br>첫 번째로 남겨 주세요!', FAIL='잠시 뒤<br>다시 열어 주세요';
+  let fresh=false;
+  const draw=(r,isFresh)=>{
+    if(!r||!r.ok) return false;
+    fresh=!!isFresh;
+    all=r.guest||[]; list();
+    if(isFresh){ try{ localStorage.setItem("cafeBoard",JSON.stringify(r)); }catch(e){} }
+    return true;
+  };
+  const list=()=>{
+    $("notes").innerHTML=all.slice(0,shown).map(g=>'<article class="note"><p>'+esc(g.m)+'</p><footer><b>'+esc(g.n)+'</b><span>'+ago(g.t)+'</span></footer></article>').join("");
+    const e=$("notesEmpty");
+    if(all.length>0||!fresh){ e.hidden=true; } else { e.innerHTML=EMPTY; e.hidden=false; }
+    $("moreNotes").hidden=all.length<=shown;
+  };
+  $("moreNotes").addEventListener("click",()=>{ shown+=8; list(); });
+  try{ const c=JSON.parse(localStorage.getItem("cafeBoard")||"null"); if(c&&c.ok) draw(c,false); }catch(e){}
+  const fail=()=>{
+    if(all.length===0 && !fresh){
+      const e=$("notesEmpty"); e.innerHTML=FAIL; e.hidden=false;
+    }
+  };
+  const load=(n=0)=>{ const ac=new AbortController(), tm=setTimeout(()=>ac.abort(),10000); return fetch(API,{signal:ac.signal}).then(r=>r.json()).then(r=>{ if(!draw(r,true)) throw new Error("bad"); })
+    .catch(()=>{ if(n<2) setTimeout(()=>load(n+1), n===0?2000:3000); else fail(); }).finally(()=>clearTimeout(tm)); };
+  const send=d=>fetch(API,{method:"POST",body:JSON.stringify(d)}).then(r=>r.json()).then(r=>{ if(!r.ok) throw new Error(r.error||"실패"); draw(r,true); return r; });
+  return {load,send};
+})();
+Board.load();
+
+/* 축하 글 창 */
+(function(){
+  const sheets={guest:$("guestSheet")}; let last=null;
+  const open=k=>{ last=document.activeElement; sheets[k].hidden=false; document.body.classList.add("locked"); setTimeout(()=>sheets[k].querySelector("input[name=name]")?.focus(),60); };
+  const close=s=>{ s.hidden=true; document.body.classList.remove("locked"); last&&last.focus(); };
+  $("openGuest").addEventListener("click",()=>open("guest"));
+  Object.values(sheets).forEach(s=>s.addEventListener("click",e=>{ if(e.target===s||e.target.closest("[data-close]")) close(s); }));
+  addEventListener("keydown",e=>{ if(e.key==="Escape") Object.values(sheets).forEach(s=>{ if(!s.hidden) close(s); }); });
+
+  const thanksImg='<img src="../assets/b/envelope.webp" alt="">';
+  const submit=(form,err,body,make,thanks)=>form.addEventListener("submit",e=>{
+    e.preventDefault(); const f=new FormData(form), d=make(f); err.hidden=true;
+    if(!d) return;
+    const btn=form.querySelector("[type=submit]"), label=btn.textContent; btn.disabled=true; btn.textContent="보내는 중…";
+    Board.send(d).then(()=>{ body.innerHTML='<div class="done">'+thanksImg+'<p>'+thanks+'</p></div><div class="acts" style="grid-template-columns:1fr"><button class="btn line" type="button" data-close>닫기</button></div>'; })
+      .catch(()=>{ err.textContent="보내지 못했어요. 잠시 뒤 다시 눌러 주세요."; err.hidden=false; btn.disabled=false; btn.textContent=label; });
+  });
+  const need=(err,t)=>{ err.textContent=t; err.hidden=false; return null; };
+  submit($("guestForm"),$("guestErr"),$("guestBody"),f=>{
+    const name=(f.get("name")||"").trim(), msg=(f.get("msg")||"").trim();
+    if(!name) return need($("guestErr"),"이름을 적어 주세요.");
+    if(!msg) return need($("guestErr"),"축하 글을 적어 주세요.");
+    return {type:"guest",name,msg,hp:f.get("hp")};
+  },"축하 글이 올라갔어요!<br>예수님도 기뻐하실 거예요.");
+})();
+
+/* 주차 */
+$("parkList").innerHTML=PARKING.map(x=>'<li'+(x.no?' class="no"':'')+'>'+x.t+'</li>').join("");
+$("parkDraft").hidden=!PARK_DRAFT;
+BGM.watch($("pkVideo"),"park");
+$("parkGo").addEventListener("click",()=>{ const w=$("pkvid"), v=$("pkVideo"); w.hidden=false; v.play().catch(()=>{}); w.scrollIntoView({behavior:"smooth",block:"center"}); });
+
+/* 8·9. 복사·보내기 */
+(function(){
+  const copy=(t,ok)=>{ if(navigator.clipboard&&isSecureContext) navigator.clipboard.writeText(t).then(()=>toast(ok),()=>prompt("길게 눌러 복사하세요",t)); else prompt("길게 눌러 복사하세요",t); };
+  $("copyAddr").addEventListener("click",()=>copy($("addrText").textContent,"주소를 복사했어요"));
+  $("copyLink").addEventListener("click",()=>copy(SITE,"초대장 주소를 복사했어요"));
+  $("shareBtn").addEventListener("click",()=>{
+    const d={title:"예수님 생일카페 — 중고등부 초대장",text:"중고등부 친구들을 초대합니다! 12월 24일(목) 오후 5시~7시, 죽전초 옆 성서교회 1층 카페. 예수님 생일파티에 같이 가요!",url:SITE};
+    if(navigator.share) navigator.share(d).catch(()=>{}); else copy(SITE,"초대장 주소를 복사했어요. 카톡에 붙여 넣어 보내 주세요");
+  });
+})();
+
+/* 눈 */
+(function(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const c=$("snow"), x=c.getContext("2d"); let W,H; const f=[];
+  const size=()=>{const r=devicePixelRatio||1;W=c.width=innerWidth*r;H=c.height=innerHeight*r;c.style.width=innerWidth+"px";c.style.height=innerHeight+"px"};
+  size(); addEventListener("resize",size);
+  for(let i=0;i<20;i++) f.push({x:Math.random(),y:Math.random(),r:1.4+Math.random()*2.4,s:.0003+Math.random()*.0005,w:Math.random()*6.28});
+  (function loop(){ x.clearRect(0,0,W,H); x.fillStyle="rgba(255,253,246,.85)"; const r=devicePixelRatio||1;
+    for(const p of f){ p.y+=p.s; p.w+=.012; if(p.y>1.02){p.y=-.02;p.x=Math.random()} x.beginPath(); x.arc((p.x+Math.sin(p.w)*.012)*W,p.y*H,p.r*r,0,6.28); x.fill(); }
+    requestAnimationFrame(loop); })();
+})();
+</script>
+</body>
+</html>
