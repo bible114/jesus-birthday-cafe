@@ -528,11 +528,11 @@ a.game .lock{background:var(--red-l);color:#fff}
     <h2>오실 건가요?</h2>
     <p class="lead">케이크와 자리를 넉넉히 준비하려고 해요.<br>오실 날을 미리 알려 주세요.</p>
     <div class="tally">
-      <div class="big" id="tallyBig">첫 번째로<br>참석을 알려 주세요</div>
+      <div class="big" id="tallyBig">불러오는 중…</div>
       <div class="days">
-        <div><small>22일 화</small><b id="t22">0명</b></div>
-        <div><small>23일 수</small><b id="t23">0명</b></div>
-        <div><small>24일 목</small><b id="t24">0명</b></div>
+        <div><small>22일 화</small><b id="t22">…</b></div>
+        <div><small>23일 수</small><b id="t23">…</b></div>
+        <div><small>24일 목</small><b id="t24">…</b></div>
       </div>
     </div>
     <div class="row-btn"><button class="btn" type="button" id="openRsvp">참석 알리기</button></div>
@@ -547,7 +547,7 @@ a.game .lock{background:var(--red-l);color:#fff}
     <p class="lead">남긴 글은 이 페이지에 함께 보여요.</p>
     <div class="row-btn"><button class="btn pine" type="button" id="openGuest">축하 글 남기기</button></div>
     <div class="notes" id="notes"></div>
-    <div class="empty" id="notesEmpty" hidden>아직 축하 글이 없어요.<br>첫 번째로 남겨 주세요!</div>
+    <div class="empty" id="notesEmpty" hidden></div>
     <button class="more" id="moreNotes" type="button" hidden>축하 글 더 보기</button>
   </section>
 
@@ -822,19 +822,34 @@ const Board=(function(){
   const ago=t=>{ if(!t) return ""; const m=Math.floor((Date.now()-t)/60000);
     if(m<1) return "방금"; if(m<60) return m+"분 전"; const h=Math.floor(m/60); if(h<24) return h+"시간 전";
     const d=new Date(t); return (d.getMonth()+1)+"월 "+d.getDate()+"일"; };
-  const draw=r=>{
-    if(!r||!r.ok) return;
+  const EMPTY='아직 축하 글이 없어요.<br>첫 번째로 남겨 주세요!', FAIL='잠시 뒤<br>다시 열어 주세요';
+  let fresh=false;
+  const draw=(r,isFresh)=>{
+    if(!r||!r.ok) return false;
+    fresh=!!isFresh;
     ["22","23","24"].forEach(k=>$("t"+k).textContent=(r.byDay[k]||0)+"명");
-    $("tallyBig").innerHTML = r.people>0 ? '지금까지 <b>'+r.people+'</b>명이<br>온다고 알려 줬어요' : '첫 번째로<br>참석을 알려 주세요';
+    $("tallyBig").innerHTML = r.people>0 ? '지금까지 <b>'+r.people+'</b>명이<br>온다고 알려 줬어요' : (isFresh ? '첫 번째로<br>참석을 알려 주세요' : '불러오는 중…');
     all=r.guest||[]; list();
+    if(isFresh){ try{ localStorage.setItem("cafeBoard",JSON.stringify(r)); }catch(e){} }
+    return true;
   };
   const list=()=>{
     $("notes").innerHTML=all.slice(0,shown).map(g=>'<article class="note"><p>'+esc(g.m)+'</p><footer><b>'+esc(g.n)+'</b><span>'+ago(g.t)+'</span></footer></article>').join("");
-    $("notesEmpty").hidden=all.length>0; $("moreNotes").hidden=all.length<=shown;
+    const e=$("notesEmpty");
+    if(all.length>0||!fresh){ e.hidden=true; } else { e.innerHTML=EMPTY; e.hidden=false; }
+    $("moreNotes").hidden=all.length<=shown;
   };
   $("moreNotes").addEventListener("click",()=>{ shown+=8; list(); });
-  const load=()=>fetch(API).then(r=>r.json()).then(draw).catch(()=>{ $("notesEmpty").hidden=false; });
-  const send=d=>fetch(API,{method:"POST",body:JSON.stringify(d)}).then(r=>r.json()).then(r=>{ if(!r.ok) throw new Error(r.error||"실패"); draw(r); return r; });
+  try{ const c=JSON.parse(localStorage.getItem("cafeBoard")||"null"); if(c&&c.ok) draw(c,false); }catch(e){}
+  const fail=()=>{
+    if(all.length===0 && !fresh){
+      const e=$("notesEmpty"); e.innerHTML=FAIL; e.hidden=false;
+      if(!$("tallyBig").querySelector("b")){ $("tallyBig").innerHTML=FAIL; }
+    }
+  };
+  const load=(n=0)=>{ const ac=new AbortController(), tm=setTimeout(()=>ac.abort(),10000); return fetch(API,{signal:ac.signal}).then(r=>r.json()).then(r=>{ if(!draw(r,true)) throw new Error("bad"); })
+    .catch(()=>{ if(n<2) setTimeout(()=>load(n+1), n===0?2000:3000); else fail(); }).finally(()=>clearTimeout(tm)); };
+  const send=d=>fetch(API,{method:"POST",body:JSON.stringify(d)}).then(r=>r.json()).then(r=>{ if(!r.ok) throw new Error(r.error||"실패"); draw(r,true); return r; });
   return {load,send};
 })();
 Board.load();
